@@ -23,13 +23,7 @@
     <Text Include="words.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="WordLoader.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="HangmanGame.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Game.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
