@@ -14,7 +14,7 @@ public:
         initializeCurrentGuess();
     }
 
-    ~HangmanGame() override = default;
+    ~HangmanGame()  = default;
 
     void play() override {
         while (!isGameOver()) {
@@ -28,12 +28,12 @@ public:
         displayGameResult();
     }
 
-    void displayGameState() const override {
+    void displayGameState() const  {
         cout << "Current word: " << currentGuess << endl;
         cout << "Attempts left: " << maxAttempts() - attempts << endl;
     }
 
-    void processGuess(char guess) override {
+    void processGuess(char guess)  {
         if (isCorrectGuess(guess)) {
             updateCurrentGuess(guess);
         }
@@ -44,11 +44,11 @@ public:
         }
     }
 
-    bool isGameOver() const override {
+    bool isGameOver() const  {
         return attempts >= maxAttempts() || currentGuess == targetWord;
     }
 
-    void displayGameResult() const override {
+    void displayGameResult() const  {
         if (currentGuess == targetWord) {
             cout << "Congratulations! You guessed the word: " << targetWord << endl;
         }
@@ -65,7 +65,7 @@ public:
         cout << endl;
     }
 
-    void displayHangman(int attempts) const override {
+    void displayHangman(int attempts) const  {
 
                 switch (attempts) {
                 case 1:
@@ -121,7 +121,7 @@ public:
     }
 
 private:
-    void loadWords(const char* filename) override {
+    void loadWords(const char* filename)  {
         ifstream wordsFile(filename);
 
         if (wordsFile.is_open()) {
